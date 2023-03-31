@@ -5,6 +5,10 @@
     <string name="date">Date</string>
     <string name="month">Month</string>
     <string name="year">Year</string>
+    <string name="date_invalid">Date cannot be empty</string>
+    <string name="month_invalid">Month cannot be empty</string>
+    <string name="zodiac_results_x">%1$s</string>
+    <string name="year_invalid">Year cannot be empty</string>
     <string name="search">Search</string>
     <string name="zodiac_results">Your zodiac here!</string>
     <string name="zodiac_image">Zodiac Image</string>
