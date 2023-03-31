@@ -134,7 +134,7 @@
             android:fontFamily="@font/montserrat"
             android:text="@string/zodiac_results"
             android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/iconZodiac"
             app:layout_constraintStart_toStartOf="@+id/iconZodiac"
