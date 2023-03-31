@@ -1,9 +1,11 @@
 package org.d3if3084.nebula
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import org.d3if3084.nebula.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +16,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.searchBtn.setOnClickListener { findZodiac() }
+        binding.switchNightMode.setOnClickListener { toggleTheme() }
+    }
+
+    private fun toggleTheme() {
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            binding.switchNightMode.setTextColor(Color.BLACK)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            binding.switchNightMode.setTextColor(Color.WHITE)
+        }
     }
 
     private fun findZodiac() {
