@@ -11,38 +11,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <Switch
-        android:minHeight="48dp"
-        android:id="@+id/switchNightMode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/dark_mode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <Switch
+            android:id="@+id/switchNightMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat"
+            android:minHeight="48dp"
+            android:text="@string/dark_mode"
+            android:textColor="@color/teal_700"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <TextView
-        android:id="@+id/zodiacIntro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/zodiac_intro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switchNightMode" />
+        <TextView
+            android:id="@+id/zodiacIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/zodiac_intro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchNightMode" />
 
-    <Button
-        android:id="@+id/searchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search"
-        app:layout_constraintEnd_toEndOf="@+id/yearHint"
-        app:layout_constraintStart_toStartOf="@+id/yearHint"
-        app:layout_constraintTop_toBottomOf="@+id/yearHint" />
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/search"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/yearHint"
+            app:layout_constraintStart_toStartOf="@+id/yearHint"
+            app:layout_constraintTop_toBottomOf="@+id/yearHint"
+            tools:ignore="TextContrastCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dateHint"
@@ -59,6 +69,7 @@
             android:id="@+id/dateInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:hint="@string/date"
             android:inputType="number"
             tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
@@ -77,9 +88,10 @@
             android:id="@+id/monthInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:hint="@string/month"
             android:inputType="number"
-            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"/>
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -95,9 +107,10 @@
             android:id="@+id/yearInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:hint="@string/year"
             android:inputType="number"
-            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,VisualLintTextFieldSize"/>
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <View
@@ -112,19 +125,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchBtn" />
 
-    <TextView
-        android:id="@+id/zodiacResults"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
-        android:text="@string/zodiac_results"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/iconZodiac"
-        app:layout_constraintStart_toStartOf="@+id/iconZodiac"
-        app:layout_constraintTop_toBottomOf="@+id/iconZodiac" />
+        <TextView
+            android:id="@+id/zodiacResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/zodiac_results"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/iconZodiac"
+            app:layout_constraintStart_toStartOf="@+id/iconZodiac"
+            app:layout_constraintTop_toBottomOf="@+id/iconZodiac" />
 
     <ImageView
         android:id="@+id/iconZodiac"
