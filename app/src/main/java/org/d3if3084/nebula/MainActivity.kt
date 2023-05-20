@@ -1,15 +1,21 @@
 package org.d3if3084.nebula
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.ViewModelProvider
 import org.d3if3084.nebula.databinding.ActivityMainBinding
+import org.d3if3084.nebula.model.ZodiacSign
+import org.d3if3084.nebula.model.ZodiacType
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val viewModel: MainViewModel by lazy {
+        ViewModelProvider(this)[MainViewModel::class.java]
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -17,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.searchBtn.setOnClickListener { findZodiac() }
         binding.switchNightMode.setOnClickListener { toggleTheme() }
+
+        viewModel.getZodiacResults().observe(this){
+            showResult(it)
+        }
     }
 
     private fun toggleTheme() {
@@ -29,17 +39,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun findZodiac() {
-
+     private fun findZodiac() {
         val date = binding.dateInp.text.toString()
         if (TextUtils.isEmpty(date)) {
             Toast.makeText(this, R.string.date_invalid, Toast.LENGTH_LONG).show()
-            return
-        }
-        try {
-            date.toInt()
-        } catch (e: java.lang.NumberFormatException) {
-            Toast.makeText(this, "Input must be a number", Toast.LENGTH_LONG).show()
             return
         }
 
@@ -48,218 +51,46 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.month_invalid, Toast.LENGTH_LONG).show()
             return
         }
-        try {
-            month.toInt()
-        } catch (e: java.lang.NumberFormatException) {
-            Toast.makeText(this, "Input must be a number", Toast.LENGTH_LONG).show()
-            return
-        }
 
         val year = binding.yearInp.text.toString()
         if (TextUtils.isEmpty(year)) {
             Toast.makeText(this, R.string.year_invalid, Toast.LENGTH_LONG).show()
             return
         }
-        try {
-            year.toInt()
-        } catch (e: java.lang.NumberFormatException) {
-            Toast.makeText(this, "Input must be a number", Toast.LENGTH_LONG).show()
-            return
-        }
 
-        val zodiac = getZodiacSign(date.toInt(), month.toInt())
-        binding.zodiacResults.text = getString(R.string.zodiac_results_x, zodiac)
+        val zodiac = viewModel.getZodiacSign(date.toInt(), month.toInt())
+         viewModel.setZodiacResults(zodiac.zodiacSign, zodiac.resultZT)
     }
-    private fun getZodiacSign(date: Int, month: Int): String {
+
+    private fun showResult(zodiac: ZodiacType?){
+        if (zodiac == null) return
+        //set image
         val imageView = binding.iconZodiac
-        val imgNumber: Int
-        val result: String = when (month) {
-            1 -> {
-                if (date <= 19) {
-                    imgNumber = R.drawable.capricorn
-                    "Capricorn: Male Goat\n" +
-                            "Element: Earth\n" +
-                            "Ruler: Saturn\n" +
-                            "Best Compatibility: Taurus, Cancer\n"
-                } else {
-                    imgNumber = R.drawable.aquarius
-                    "Aquarius: Water Bearer\n" +
-                            "Element: Air\n" +
-                            "Ruler: Uranus\n" +
-                            "Best Compatibility: Leo, Sagittarius\n"
-                }
-            }
-            2 -> {
-                if (date <= 18) {
-                    imgNumber = R.drawable.aquarius
-                    "Aquarius: Water Bearer\n" +
-                            "Element: Air\n" +
-                            "Ruler: Uranus\n" +
-                            "Best Compatibility: Leo, Sagittarius\n"
-                } else {
-                    imgNumber = R.drawable.pisces
-                    "Pisces: Fish\n" +
-                            "Element: Water\n" +
-                            "Ruler: Neptune\n" +
-                            "Best Compatibility: Virgo, Taurus\n"
-                }
-            }
-            3 -> {
-                if (date <= 20) {
-                    imgNumber = R.drawable.pisces
-                    "Pisces: Fish\n" +
-                            "Element: Water\n" +
-                            "Ruler: Neptune\n" +
-                            "Best Compatibility: Virgo, Taurus\n"
-                } else {
-                    imgNumber = R.drawable.aries
-                    "Aries: Ram\n" +
-                            "Element: Fire\n" +
-                            "Ruler: Mars\n" +
-                            "Best Compatibility: Libra, Leo\n"
-                }
-            }
-            4 -> {
-                if (date <= 19) {
-                    imgNumber = R.drawable.aries
-                    "Aries: Ram\n" +
-                            "Element: Fire\n" +
-                            "Ruler: Mars\n" +
-                            "Best Compatibility: Libra, Leo\n"
-                } else {
-                    imgNumber = R.drawable.taurus
-                    "Taurus: Bull\n" +
-                            "Element: Earth\n" +
-                            "Ruler: Venus\n" +
-                            "Best Compatibility: Cancer, Scorpio\n"
-                }
-            }
-            5 -> {
-                if (date <= 20) {
-                    imgNumber = R.drawable.taurus
-                    "Taurus: Bull\n" +
-                            "Element: Earth\n" +
-                            "Ruler: Venus\n" +
-                            "Best Compatibility: Cancer, Scorpio\n"
-                } else {
-                    imgNumber = R.drawable.gemini
-                    "Gemini: The Twins\n" +
-                            "Element: Air\n" +
-                            "Ruler: Mercury\n" +
-                            "Greatest Compatibility: Sagittarius, Aquarius\n"
-                }
-            }
-            6 -> {
-                if (date <= 20) {
-                    imgNumber = R.drawable.gemini
-                    "Gemini: The Twins\n" +
-                            "Element: Air\n" +
-                            "Ruler: Mercury\n" +
-                            "Greatest Compatibility: Sagittarius, Aquarius\n"
-                } else {
-                    imgNumber = R.drawable.cancer
-                    "Cancer: Crab\n" +
-                            "Element: Water\n" +
-                            "Ruler: Moon\n" +
-                            "Best Compatibility: Capricorn, Taurus\n"
-                }
-            }
-            7 -> {
-                if (date <= 22) {
-                    imgNumber = R.drawable.cancer
-                    "Cancer: Crab\n" +
-                            "Element: Water\n" +
-                            "Ruler: Moon\n" +
-                            "Best Compatibility: Capricorn, Taurus\n"
-                } else {
-                    imgNumber = R.drawable.leo
-                    "Leo: Lion\n" +
-                            "Element: Fire\n" +
-                            "Ruler: Sun\n" +
-                            "Best Compatibility: Aquarius, Gemini\n"
-                }
-            }
-            8 -> {
-                if (date <= 22) {
-                    imgNumber = R.drawable.leo
-                    "Leo: Lion\n" +
-                            "Element: Fire\n" +
-                            "Ruler: Sun\n" +
-                            "Best Compatibility: Aquarius, Gemini\n"
-                } else {
-                    imgNumber = R.drawable.virgo
-                    "Virgo: The Girl\n" +
-                            "Element: Earth\n" +
-                            "Ruler: Mercury\n" +
-                            "Best Compatibility: Pisces, Cancer\n"
-                }
-            }
-            9 -> {
-                if (date <= 22) {
-                    imgNumber = R.drawable.virgo
-                    "Virgo: The Girl\n" +
-                            "Element: Earth\n" +
-                            "Ruler: Mercury\n" +
-                            "Best Compatibility: Pisces, Cancer\n"
-                } else {
-                    imgNumber = R.drawable.libra
-                    "Libra: Scales\n" +
-                            "Element: Air\n" +
-                            "Ruler: Venus\n" +
-                            "Greatest Compatibility: Aries, Sagittarius\n"
-                }
-            }
-            10 -> {
-                if (date <= 22) {
-                    imgNumber = R.drawable.libra
-                    "Libra: Scales\n" +
-                            "Element: Air\n" +
-                            "Ruler: Venus\n" +
-                            "Greatest Compatibility: Aries, Sagittarius\n"
-                } else {
-                    imgNumber = R.drawable.scorpio
-                    "Scorpio: Scorpion\n" +
-                            "Element: Water\n" +
-                            "Ruler: Pluto\n" +
-                            "Best Compatibility: Taurus, Cancer\n"
-                }
-            }
-            11 -> {
-                if (date <= 21) {
-                    imgNumber = R.drawable.scorpio
-                    "Scorpio: Scorpion\n" +
-                            "Element: Water\n" +
-                            "Ruler: Pluto\n" +
-                            "Best Compatibility: Taurus, Cancer\n"
-                } else {
-                    imgNumber = R.drawable.sagittarius
-                    "Sagittarius: The Archer\n" +
-                            "Element: Fire\n" +
-                            "Ruler: Jupiter\n" +
-                            "Best Compatibility: Gemini, Aries\n"
-                }
-            }
-            12 -> {
-                if (date <= 21) {
-                    imgNumber = R.drawable.sagittarius
-                    "Sagittarius: The Archer\n" +
-                            "Element: Fire\n" +
-                            "Ruler: Jupiter\n" +
-                            "Best Compatibility: Gemini, Aries\n"
-                } else {
-                    imgNumber = R.drawable.capricorn
-                    "Capricorn: Male Goat\n" +
-                            "Element: Earth\n" +
-                            "Ruler: Saturn\n" +
-                            "Best Compatibility: Taurus, Cancer\n"
-                }
-            }
+        imageView.setImageResource(getZodiacSignLabel(zodiac.zodiacSign))
+        // set text
+        binding.zodiacResults.text = getString(R.string.zodiac_results_x, zodiac.resultZT)
+    }
+
+
+    private fun getZodiacSignLabel(result: ZodiacSign): Int{
+        val stringRes = when (result) {
+            ZodiacSign.CAPRICORN -> R.drawable.capricorn
+            ZodiacSign.AQUARIUS -> R.drawable.aquarius
+            ZodiacSign.PISCES -> R.drawable.pisces
+            ZodiacSign.ARIES -> R.drawable.aries
+            ZodiacSign.TAURUS -> R.drawable.taurus
+            ZodiacSign.GEMINI -> R.drawable.gemini
+            ZodiacSign.CANCER -> R.drawable.cancer
+            ZodiacSign.LEO -> R.drawable.leo
+            ZodiacSign.VIRGO -> R.drawable.virgo
+            ZodiacSign.LIBRA -> R.drawable.libra
+            ZodiacSign.SCORPIO -> R.drawable.scorpio
+            ZodiacSign.SAGITTARIUS -> R.drawable.sagittarius
             else -> {
                 binding.iconZodiac.isEnabled = false
-                return "Invalid date"
+                return 0
             }
         }
-        imageView.setImageResource(imgNumber)
-        return result
+        return stringRes
     }
 }
