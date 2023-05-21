@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/findZodiacFragment">
+
+    <fragment
+        android:id="@+id/findZodiacFragment"
+        android:name="org.d3if3084.nebula.ui.FindZodiacFragment"
+        android:label="Nebula"
+        tools:layout="@layout/fragment_findzodiac" >
+        <action
+            android:id="@+id/action_findZodiacFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_findZodiacFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="org.d3if3084.nebula.ui.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="zodiac"
+            app:argType="org.d3if3084.nebula.model.ZodiacSign" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="org.d3if3084.nebula.ui.AboutFragment"
+        android:label="AboutFragment" />
+</navigation>

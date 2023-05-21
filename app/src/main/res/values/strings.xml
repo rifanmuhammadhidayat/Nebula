@@ -12,4 +12,68 @@
     <string name="search">Search</string>
     <string name="zodiac_results">Your zodiac here!</string>
     <string name="zodiac_image">Zodiac Image</string>
+    <string name="see_details">See Details</string>
+    <string name="share">Share</string>
+    <string name="share_template">Date\t\t: %1$s\nMonth\t: %2$s\nYear\t\t: %3$s\n\n%4$s</string>
+
+    //Details title
+    <string name="title_aquarius">The Water Bearers</string>
+    <string name="title_pisces">The Fishes</string>
+    <string name="title_aries">The Rams</string>
+    <string name="title_taurus">The Bulls</string>
+    <string name="title_gemini">The Twins</string>
+    <string name="title_cancer">The Crabs</string>
+    <string name="title_leo">The Lions</string>
+    <string name="title_virgo">The Virgins</string>
+    <string name="title_libra">The Scales</string>
+    <string name="title_scorpio">The Scorpions</string>
+    <string name="title_sagittarius">The Archers</string>
+    <string name="title_capricorn">The Goats</string>
+    <string name="title_invalid">PeekaBoo!</string>
+
+    //Detailed content
+    <string name="details_aquarius">Aquarius is an innovative, independent, and idealistic zodiac sign.
+        They often have unique and forward-thinking perspectives. Aquarius also cares about social
+        issues and has a passion for making the world a better place.</string>
+    <string name="details_pisces">Pisces is an intuitive, sensitive, and empathetic zodiac sign.
+        They have a strong imagination and often feel connected to the spiritual world. Pisces is
+        also artistic, compassionate, and deeply attuned to the emotions of others.</string>
+    <string name="details_aries">Aries is an energetic, enthusiastic, and courageous zodiac sign.
+        They possess strong leadership qualities and often have a great drive to achieve their goals.
+        Aries also tend to be daring risk-takers and have a adventurous spirit.</string>
+    <string name="details_taurus">Taurus is known as a practical, stable, and resilient zodiac sign.
+        They highly value comfort and beauty and often have an interest in art and material possessions.
+        Taurus is also loyal and steadfast in relationships.</string>
+    <string name="details_gemini">Gemini is an intelligent, communicative, and highly social zodiac sign.
+        They have a tendency to adapt quickly and have diverse interests.
+        Gemini is also renowned for being articulate and easygoing.</string>
+    <string name="details_cancer">Cancer is an emotional, caring, and compassionate zodiac sign.
+        They form strong bonds with family and home and often exhibit a high sensitivity towards the feelings of others.
+        Cancer also tends to protect and nurture their loved ones.</string>
+    <string name="details_leo">Leo is a confident, brave, and enthusiastic zodiac sign.
+        They often stand out and have a need for recognition and appreciation.
+        Leo also tends to be a charismatic leader and radiates warmth and excitement.</string>
+    <string name="details_virgo">Virgo is a practical, analytical, and detail-oriented zodiac sign.
+        They have high standards for themselves and others and often become perfectionists.
+        Virgo also focuses on details and possesses strong analytical abilities.</string>
+    <string name="details_libra">Libra is a harmonious, fair, and social zodiac sign.
+        They have a tendency to seek balance and harmony in relationships and their environment.
+        Libra also has an affinity for beauty and an interest in art and aesthetics.</string>
+    <string name="details_scorpio">Scorpio is a passionate, mysterious, and sharp zodiac sign.
+        They have intense energy and often possess strong emotional strength.
+        Scorpio is also known for their loyalty and sharp instincts in reading others.</string>
+    <string name="details_sagittarius">Sagittarius is an adventurous, free-spirited, and optimistic zodiac sign.
+        They have a high spirit for exploring the world and seeking new experiences.
+        Sagittarius is also honest, open-minded, and has a broad and optimistic view of life.</string>
+    <string name="details_capricorn">Capricorn is an ambitious, practical, and serious zodiac sign.
+        They have clear goals and the perseverance to achieve them. Capricorn is also tough, responsible, and reliable.</string>
+    <string name="details_invalid">Your birth date has not been created yet, maybe in the future there will be one, who knows!</string>
+
+    //AboutApp
+    <string name="about_application">About Application</string>
+    <string name="copyright">Nebula is an Android application for
+        search for the name of the zodiac so that someone can know the zodiac and knowledge about the
+        zodiac.\n\nThis application is made for classes Assessment Mobpro 1. Find the code at
+        https://github.com/rifanmuhammadhidayat/Nebula.git\n\nCopyright © 2023 Rifan Muhammad Hidayat.\nAll rights reserved.</string>
+
 </resources>

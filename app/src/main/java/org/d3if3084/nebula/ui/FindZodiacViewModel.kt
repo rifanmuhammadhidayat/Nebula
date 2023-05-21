@@ -1,4 +1,4 @@
-package org.d3if3084.nebula
+package org.d3if3084.nebula.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,10 +8,19 @@ import org.d3if3084.nebula.model.ZodiacType
 
 class MainViewModel: ViewModel() {
     private val zodiacResult = MutableLiveData<ZodiacType?>()
+    private val navigation = MutableLiveData<ZodiacSign?>()
 
     fun setZodiacResults(zodiacSign: ZodiacSign, hasil: String){
         zodiacResult.value = ZodiacType(zodiacSign, hasil)
     }
+
+    fun startNavigation() {
+        navigation.value = zodiacResult.value?.zodiacSign
+    }
+    fun finishNavigation() {
+        navigation.value = null
+    }
+    fun getNavigation() : LiveData<ZodiacSign?> = navigation
 
     fun getZodiacSign(date: Int, month: Int): ZodiacType{
         val zodiacType = ZodiacType(ZodiacSign.INVALID, "")
