@@ -4,4 +4,9 @@
         android:id="@+id/menu_about"
         android:title="@string/about_application"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_history"
+        android:icon="@drawable/baseline_history_24"
+        android:title="@string/history"
+        app:showAsAction="ifRoom" />
 </menu>

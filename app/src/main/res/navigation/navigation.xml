@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/findZodiacFragment"
-        android:name="org.d3if3084.nebula.ui.FindZodiacFragment"
+        android:name="org.d3if3084.nebula.findzodiac.FindZodiacFragment"
         android:label="Nebula"
         tools:layout="@layout/fragment_findzodiac" >
         <action
@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_findZodiacFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_findZodiacFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -29,4 +32,9 @@
         android:id="@+id/aboutFragment"
         android:name="org.d3if3084.nebula.ui.AboutFragment"
         android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="org.d3if3084.nebula.ui.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />
 </navigation>
