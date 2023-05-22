@@ -17,7 +17,7 @@ class FindZodiacViewModel(private val db: ZodiacDao) : ViewModel() {
     private val zodiacResult = MutableLiveData<ZodiacType?>()
     private val navigation = MutableLiveData<ZodiacSign?>()
 
-    fun setZodiacResults(zodiacType: ZodiacType, date: Int, month: Int) {
+    fun setZodiacResults(date: Int, month: Int) {
         val zodiacData = ZodiacEntity(
             date = date,
             month = month
@@ -41,7 +41,7 @@ class FindZodiacViewModel(private val db: ZodiacDao) : ViewModel() {
 
     fun getNavigation(): LiveData<ZodiacSign?> = navigation
 
-    fun getZodiacSign(date: Int, month: Int): ZodiacType {
+    fun getZodiacSign(): ZodiacType {
         val zodiacType = ZodiacType(ZodiacSign.INVALID, "")
         return zodiacType
     }

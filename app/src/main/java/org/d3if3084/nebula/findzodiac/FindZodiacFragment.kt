@@ -4,14 +4,11 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.asLiveData
 import androidx.navigation.fragment.findNavController
 import org.d3if3084.nebula.R
 import org.d3if3084.nebula.databinding.FragmentFindzodiacBinding
@@ -129,8 +126,8 @@ class FindZodiacFragment : Fragment() {
             return
         }
 
-        val zodiac = viewModel.getZodiacSign(date.toInt(), month.toInt())
-        viewModel.setZodiacResults(zodiac, date.toInt(), month.toInt())
+        val zodiac = viewModel.getZodiacSign()
+        viewModel.setZodiacResults(date.toInt(), month.toInt())
     }
 
     private fun showResult(zodiac: ZodiacType?) {
