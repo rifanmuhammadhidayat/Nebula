@@ -8,15 +8,16 @@ import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
 import androidx.navigation.fragment.findNavController
 import org.d3if3084.nebula.R
 import org.d3if3084.nebula.databinding.FragmentFindzodiacBinding
 import org.d3if3084.nebula.db.ZodiacDb
 import org.d3if3084.nebula.model.ZodiacSign
 import org.d3if3084.nebula.model.ZodiacType
-
 
 class FindZodiacFragment : Fragment() {
     private lateinit var binding: FragmentFindzodiacBinding
@@ -54,6 +55,7 @@ class FindZodiacFragment : Fragment() {
             )
             viewModel.finishNavigation()
         })
+
     }
 
 

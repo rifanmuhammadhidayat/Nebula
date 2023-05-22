@@ -76,6 +76,7 @@ class HistoryAdapter :
                 ZodiacSign.LIBRA -> R.color.libra
                 ZodiacSign.SCORPIO -> R.color.scorpio
                 ZodiacSign.SAGITTARIUS -> R.color.sagittarius
+                ZodiacSign.CAPRICORN -> R.color.capricorn
                 else -> R.color.invalid
             }
             val circleBg = zodiacTextView.background as GradientDrawable

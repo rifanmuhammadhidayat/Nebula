@@ -10,6 +10,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_background">#000000</color>
+    <color name="light_background">#FFFFFF</color>
 
     //History zodiac colour
     <color name="aquarius">#FF0000</color>
@@ -25,4 +27,5 @@
     <color name="sagittarius">#000080</color>
     <color name="capricorn">#FF4500</color>
     <color name="invalid">#000000</color>
+
 </resources>

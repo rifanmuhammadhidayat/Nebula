@@ -6,4 +6,10 @@
         android:icon="@drawable/baseline_delete_forever_24"
         android:title="@string/delete_history"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_switch_layout"
+        android:icon="@drawable/baseline_grid_view_24"
+        android:title="@string/switch_layout"
+        app:showAsAction="always" />
 </menu>
