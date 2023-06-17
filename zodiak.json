@@ -1,37 +1,37 @@
 [
     {
         "judul" : "Aries",
-        "tgl" : "21 Maret - 19 April",
+        "tgl" : "March 21 - April 19",
         "imageId" : "aries",
-        "tempat" : "Kambing Jantan",
-        "deskripsi" : "Aries dilambangkan dengan kambing jantan yang suka mencari tantangan dan punya energi yang besar. Pada zaman kepercayaan kuno, kambing jantan adalah simbol kepemimpinan, keberanian dan kekuasaan. Orang yang lahir di bawah rasi bintang zodiak yang lahir pada 21 Maret - 19 April ini punya sifat seperti api, selalu bersemangat dan berdarah panas. Dia cenderung nggak punya rasa takut dan suka membela temannya. Namun karena emosinya yang sering meluap-luap, mereka terkesan temperamental dan sulit bersabar."
+        "tempat" : "Male goat",
+        "deskripsi" : "Aries is symbolized by the ram, which represents their love for challenges and their immense energy. In ancient belief systems, the ram was a symbol of leadership, courage, and power. People born under the zodiac sign from March 21 to April 19 have a fiery nature, always enthusiastic and hot-blooded. They tend to fear nothing and stand up for their friends. However, due to their emotions often overflowing, they can appear temperamental and impatient."
     }, 
     {
         "judul" : "Taurus",
-        "tgl" : "21 April - 20 Mei",
+        "tgl" : "April 21 - May 20",
         "imageId" : "taurus",
-        "tempat" : "Banteng",
-        "deskripsi" : "Banteng merupakan lambang zodiak Taurus. Nggak banyak orang yang tahu bahwa banteng sebenarnya punya jiwa yang tenang. Namun jika mereka merasa terganggu, mereka nggak ragu untuk mengejarmu. Orang yang lahir antara tanggal 21 April - 20 Mei punya hasrat untuk memegang kendali dalam lingkungan. Namun di balik sosoknya yang berpendirian, mereka sangat menikmati kesenangan seperti seks dan barang-barang mewah. Dia akan bekerja keras untuk memenuhi kebutuhannya yang mahal tersebut. Taurus adalah zodiak yang penyabar, namun jangan terus pancing mereka kalau kamu nggak mau diserang."
+        "tempat" : "Bull",
+        "deskripsi" : "The bull is the symbol of the Taurus zodiac. Not many people know that bulls actually have a calm nature. However, if they feel provoked, they won't hesitate to charge at you. People born between April 21 and May 20 have a desire to be in control of their surroundings. Behind their strong-willed persona, they greatly enjoy pleasures such as sex and luxurious items. They will work hard to fulfill their expensive needs. Taurus is a patient zodiac sign, but don't continuously provoke them if you don't want to be attacked."
     },
     {
         "judul" : "Gemini",
-        "tgl" : "21 Mei - 21 Juni",
+        "tgl" : "May 21 - June 21",
         "imageId" : "gemini",
-        "tempat" : "Wanita Kembar",
-        "deskripsi" : "Gemini yang berlambang anak kembar membuat mereka kurang suka melakukan banyak hal seorang diri. Baginya, komunikasi adalah hal yang terpenting dalam hidup dan mereka suka berbagi ide kepada orang lain. Mengobrol dengan orang yang lahir di tanggal 21 Mei - 21 Juni memang menyenangkan karena dia tahu banyak hal dan punya selera humor yang baik, namun kadang Gemini terkesan menyebalkan karena mereka suka cari-cari perhatian."
+        "tempat" : "Twins",
+        "deskripsi" : "Gemini, represented by the symbol of twins, dislikes doing many things alone. Communication is the most important aspect of their lives, and they enjoy sharing ideas with others. Conversations with people born between May 21 and June 21 are enjoyable because they have a broad knowledge and a good sense of humor. However, Geminis can be annoying at times because they seek attention."
     },
     {
         "judul" : "Cancer",
-        "tgl" : "22 Juni - 22 Juli ",
+        "tgl" : "June 22 - July 22",
         "imageId" : "kepiting",
-        "tempat" : "Cancer",
-        "deskripsi" : "Kepiting adalah lambang zodiak Cancer. Meski ukurannya kecil, kepiting adalah salah satu hewan yang selalu membawa rumahnya kemanapun dia pergi. Hal tersebut merupakan cerminan dari karakter zodiak di tanggal 22 Juni - 22 Juli yang dekat dengan keluarga dan loyal kepada teman-temannya. Cara berjalan kepiting yang menyamping sesuai dengan prinsip orang Cancer; dia akan memilih jalan alternatif lain (selain berjalan lurus) untuk mencapai tujuannya. Hati-hati, Cancer akan mencapitmu kalau sedang moody."
+        "tempat" : "Crab",
+        "deskripsi" : "The crab is the symbol of the Cancer zodiac. Despite its small size, the crab is an animal that always carries its home wherever it goes. This reflects the character of individuals born between June 22 and July 22, who are close to their families and loyal to their friends. The sideways movement of the crab aligns with the principles of people with the Cancer zodiac sign; they will choose alternative paths (rather than a direct approach) to achieve their goals. Be careful, as Cancer individuals will pinch you when they're moody."
     },
     {
         "judul" : "Leo",
-        "tgl" : " 23 Juli - 23 Agustus",
+        "tgl" : " July 23 - August 23",
         "imageId" : "singa",
-        "tempat" : "Singa",
-        "deskripsi" : "Leo merupakan zodiak dengan lambang singa, sang raja hutan. Leo memiliki kepribadian yang rileks namun punya rasa percaya diri yang besar. Karena terbiasa memimpin, maka zodiak yang berada di tanggal 23 Juli - 23 Agustus tersebut kurang bisa bekerja secara maksimal ketika dia berada di bawah pimpinan orang lain. Karena mereka adalah ‘raja’, mereka paling benci ketika merasa nggak dihargai. Sebagai raja yang baik, Leo selalu bersikap jujur apapun situasinya. Namun karena percaya dirinya yang begitu tinggi, dia terlihat seperti raja yang angkuh."
+        "tempat" : "Lion",
+        "deskripsi" : "Leo is a zodiac sign symbolized by the lion, the king of the jungle. Leo has a relaxed personality but possesses a great sense of self-confidence. Due to their natural inclination to lead, individuals born between July 23 and August 23 may find it difficult to work to their fullest potential when placed under the authority of others. As they are 'kings,' they detest feeling unappreciated. As a good ruler, Leo always maintains honesty regardless of the situation. However, due to their exceptionally high self-confidence, they may appear arrogant like a king."
     }
 ]
