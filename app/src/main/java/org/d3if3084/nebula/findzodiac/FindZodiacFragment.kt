@@ -15,6 +15,7 @@ import org.d3if3084.nebula.databinding.FragmentFindzodiacBinding
 import org.d3if3084.nebula.db.ZodiacDb
 import org.d3if3084.nebula.model.ZodiacSign
 import org.d3if3084.nebula.model.ZodiacType
+import org.d3if3084.nebula.ui.zodiak.ZodiakActivity
 
 class FindZodiacFragment : Fragment() {
     private lateinit var binding: FragmentFindzodiacBinding
@@ -39,6 +40,7 @@ class FindZodiacFragment : Fragment() {
         binding.detailsButton.setOnClickListener { viewModel.startNavigation() }
         binding.switchNightMode.setOnClickListener { toggleTheme() }
         binding.shareButton.setOnClickListener { shareData() }
+        binding.btnLanjut.setOnClickListener { lanjutData() }
         binding.buttonGroup.visibility = View.VISIBLE
         viewModel.getZodiacResults().observe(requireActivity()) {
             showResult(it)
@@ -54,6 +56,10 @@ class FindZodiacFragment : Fragment() {
         })
 
     }
+
+    private fun lanjutData() {
+        val lanjut = Intent(requireContext(), ZodiakActivity::class.java)
+        startActivity(lanjut)    }
 
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

@@ -82,7 +82,8 @@
     //History
     <string name="data_x">Date: %1$d - Month: %2$d</string>
     <string name="results_x">%1$s</string>
-
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data Zodiak otomatis</string>
     //Delete
     <string name="delete_button">Delete</string>
     <string name="confirm_delete_history">Delete History?</string>
@@ -90,4 +91,9 @@
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
     <string name="switch_layout">Ubah tampilan</string>
+
+    <string name="message">%1$s diklik!</string>
+    <string name="notif_title">Ada Zodiak baru!</string>
+    <string name="notif_text">Cek sekarang biar nggak penasaran..</string>
+    <string name="koneksi_error">koneksi eror</string>
 </resources>
